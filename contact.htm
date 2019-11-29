@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<!--
+*****************************************************************************
+Title: Brette Mahan's final project contact page.
+Use: Contact page for the fictional theatre Screen Queen Cineplex
+Author: Brette Mahan
+School/Term: Southern Illinois University, Fall 2019
+Developed: November 30, 2019
+Tested: November 30, 2019; Passed on Firefox and Chrome browsers.
+******************************************************************************
+-->
+<html lang="en-US">
+<head>
+        <meta charset="utf-8">
+        <meta name="description" content="A webpage for the Screen Queen Cineplex.">
+        <meta name="keywords" content="movies, cinema, cineplex, screen, queen, theatre, theater">
+        <title>Screen Queen Cineplex</title>
+        <link rel="stylesheet" href="styles/main.css">
+        <link rel="stylesheet" href="styles/slicknav.scss">
+        <link rel="shortcut icon" href="favicon.ico">
+        <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+        <script src="js/jquery.slicknav.js"></script>
+        <script type="text/javascript">
+            $(document) .ready(function() {
+                $('#nav_menu').slicknav({prependTo:"#mobile_menu"});
+            });
+        </script>
+        <meta content="width=device-width, initial-scale=1" name="viewport" />
+</head>
+<body>
+    <header>
+       <h1 class="header">Welcome to the Screen Queen Cineplex</h1>
+    </header>
+    <!-- Navigation Menu. -->   
+    <nav id="mobile_menu"></nav>
+    <nav id="nav_menu">
+        <ul>
+            <li><a href="index.htm">Home</a></li>
+            <li><a href="nowplaying.htm">Now Playing</a></li>
+            <li><a href="comingsoon.htm">Coming Soon</a></li>
+            <li><a href="events.htm">Events</a></li>
+            <li><a href="contact.htm">Contact</a></li>
+            <li><a href="aboutus.htm">About Us</a></li>
+        </ul>
+    </nav>
+    <form id="contactform" method="post" action="response.htm">
+    <fieldset id="contact">
+        <legend>Contact Us</legend>
+        <label for="first_name">First Name:</label>
+        <input type="text" name="name" id="first_name" required autofocus placeholder="John"
+                maxlength="25" minlength="1" ><br><br>
+        <label for="last_name">Last Name:</label>
+        <input type="text" name="name" id="last_name" required placeholder="Smith"
+                maxlength="25" minlength="1" ><br><br>
+        <label for="email">E-Mail:</label>
+        <input type="email" name="email" id="email" required
+                minlength="10"
+                maxlength="25"
+                placeholder="johnsmith@gmail.com"><br><br>
+        <label for="phone">Phone Number:</label>
+        <input type="tel" name="phone" id="phone" placeholder="999-999-9999" required
+                minlength="10"
+                maxlength="12"
+                pattern="\d{3}[\-]\d{3}[\-]\d{4}"
+                title="Must be in 999-999-9999 format"><br><br>
+        <label for="subdate">Date:</label>
+        <input type="date" name="subdate" id="subdate" required><br><br>
+        <fieldset><!-- Checkboxes for inquiry type -->
+        <legend>Why are you contacting us today?</legend>
+        <input type="checkbox" name="questionbox" id="questionbox" value="Questions">
+        <label for="questionbox">Questions</label><br>
+        <input type="checkbox" name="careerbox" id="careerbox" value="Careers">
+        <label for="careerbox">Careers</label><br>
+        <input type="checkbox" name="reviewbox" id="reviewbox" value="Reviews">
+        <label for="reviewbox">Reviews</label><br><br>
+        </fieldset><br>
+        <fieldset><!-- Radio buttons-->
+        <legend>Visit Type:</legend>
+        <input type="radio" name="movie" id="movie" value="movie">
+        <label for="movie">Movie</label><br>
+        <input type="radio" name="event" id="event" value="event">
+        <label for="event">Event</label><br>
+        <input type="radio" name="na" id="na" value="na">
+        <label for="na">N/A</label><br>
+        </fieldset><br>
+        <label for="message">Message:</label><br>
+        <textarea id="message" placeholder="Please enter your message here. If contacting us regarding an event, past or upcoming, please include the event name and date." required
+                minlength="20"
+                maxlength="200"
+        ></textarea>
+    </fieldset><br>
+    <input type="submit" id="submit" value="Submit">
+    <input type="reset" id="reset" value="Reset"><br>
+    </form>
+</body>
+<footer>
+    <a href="Index.htm">Home</a><br>
+    <a href="nowplaying.htm">Now Playing</a><br>
+    <a href="comingsoon.htm">Coming Soon</a><br>
+    <a href="events.htm">Events</a><br>
+    <a href="contact.htm">Contact Us</a><br>
+    <a href="aboutus.htm">About Us</a><br><br>
+    <a href="https://www.siu.edu/">Page created by a Southern Illinois University student in Benton, IL.</a>
+    <p>Developed during the Fall 2019 semester.</p>
+</footer>
+</html>
